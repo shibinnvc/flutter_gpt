@@ -28,12 +28,14 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  chat_gpt_sdk: 2.1.5
+  chat_gpt_sdk: ^2.2.4
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  flutter_dotenv: ^5.0.0
-  # velocity_x: ^4.1.1
+  flutter_dotenv: ^5.1.0
+  http: ^1.1.0
+  loading_animation_widget: ^1.2.0+4
+  speech_to_text: ^6.3.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -52,6 +54,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - .env
+    - assets/sounds/speech_to_text_listening.m4r
+    - assets/sounds/speech_to_text_cancel.m4r
+    - assets/sounds/speech_to_text_stop.m4r
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

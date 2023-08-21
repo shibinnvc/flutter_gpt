@@ -11,15 +11,22 @@ Future main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ChatGPT Demo',
+      title: 'ChatGPT',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        primaryColor: Colors.white,
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+            backgroundColor: Color.fromARGB(255, 7, 38, 56),
+            centerTitle: true,
+            titleTextStyle: TextStyle(
+                color: Colors.white,
+                fontSize: 19,
+                fontWeight: FontWeight.bold)),
         useMaterial3: true,
       ),
       home: const ChatScreen(),
