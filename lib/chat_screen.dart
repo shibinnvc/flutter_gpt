@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_gpt/models.dart';
@@ -95,17 +94,17 @@ class _ChatScreenState extends State<ChatScreen> {
 
       if (response.statusCode == 200) {
         ResponseModel responseModel = responseModelFromJson(response.body);
-        log(response.body.toString());
-        log(responseModel.choices[0].text);
+        // log(response.body.toString());
+        // log(responseModel.choices[0].text);
         _insertNewChat(responseModel.choices[0].text);
       } else {
         //want to remove
         _insertNewChat(
             "All loading animation APIs are same straight forward. There is a static method for each animation inside LoadingAnimationWidget class, which returns the Object of that animation. Both size and color are required some animations need more than one color.");
-        log(response.body);
+        // log(response.body);
       }
     } catch (e) {
-      log(e.toString());
+      // log(e.toString());
     }
     if (_speechEnabled) {
       setState(() {
